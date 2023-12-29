@@ -1,0 +1,121 @@
+.membersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}
+
+.membersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    position: relative;
+    align-items: center;
+    padding: 6px;
+}
+
+.member:hover {
+    background-color: beige;
+}
+
+.member:hover .memberToolbar {
+    display: flex;
+}
+
+.memberToolbar {
+    display: none;
+    position: absolute;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.5);
+    gap:2px;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    font-size: 1px;
+}
+
+.memberToolbar:hover {
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    font-size: inherit;
+}
+
+.memberToolbar button {
+    padding: 0px;
+    display: inline-block;
+    width: 50%;
+}
+
+.memberName {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #fff;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+.modal {
+    padding: 0;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.2), 0 8px 32px rgba(0,0,0,0.1);
+}
+
+
+.modal header {
+    padding: 16px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+.modal main {
+    padding: 16px;
+
+}
+
+.modal main input {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+}
+
+.modal main img {
+    display: inline-block;
+    margin-right: 16px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #adadad;
+    border-radius: 50%;
+    background-color: #adadad;
+}
+
+.modal footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 16px;
+    border-top: 1px solid #e0e0e0;
+    gap: 8px;
+}
+

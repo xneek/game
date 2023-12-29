@@ -1,0 +1,29 @@
+.ava {
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center center;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.133);
+}
+
+.ava:hover {
+    background-size: contain;
+}
+
+.empty {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg,#999, #f8f8f8,#999 )!important;
+}
+
+.empty:before {
+    position: absolute;
+    content: '👩‍🚀';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    opacity: 0.5;
+}

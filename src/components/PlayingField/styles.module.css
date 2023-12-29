@@ -1,0 +1,11 @@
+.playingField {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: flex-start;
+    background-color: rgb(201, 201, 201);
+    padding: 2px;
+}

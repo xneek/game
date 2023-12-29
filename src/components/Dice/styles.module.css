@@ -1,0 +1,48 @@
+.dice {
+    box-sizing: border-box;
+    width: var(--footer-height);
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.diceResult {
+    font-size: 88px;
+    line-height: var(--footer-height);
+    color: red;
+justify-self: flex-start;
+}
+
+.loading {
+    font-size: 88px;
+    line-height: var(--footer-height);
+    color: red;
+    position: relative;
+    width: 0;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    text-align: right;
+}
+
+.loading:before {
+    content: attr(data-nums);
+    position: absolute;
+    right: 0;
+    top: 0;
+    word-break: break-all;
+    animation: roll 0.2s steps(10) forwards infinite;
+    font-size: 75px;
+    color: red;
+    font-weight: bold;
+    text-align: right;
+    white-space: pre;
+}
+
+@keyframes roll {
+    100% {
+        transform: translate3d(0, -10em, 0);
+      }
+}

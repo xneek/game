@@ -1,0 +1,37 @@
+.gameState {
+    height: calc(var(--footer-height) - 24px);
+    overflow-y: auto;
+}
+
+.item {
+    border: 1px solid #e0e0e0;
+    position: relative;
+    border-radius: 3px;
+    padding: 2px;
+    padding-bottom: 4px;
+    margin: 2px;
+    margin-bottom: 5px;
+    background: #f8f8f8;
+    line-height: 0.8em;
+}
+
+.progress {
+    height: 3px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    background-color: grey;
+}
+
+.winners {
+    display: flex;
+    gap: 16px;
+    padding: 2px 8px;
+    background: gold;
+    flex-wrap: wrap;
+}
+
+.winner {
+    display: flex;
+    align-items: center;
+}

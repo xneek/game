@@ -1,0 +1,7 @@
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hiddenInput {position: absolute; left: -999px;}
