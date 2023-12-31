@@ -24,6 +24,7 @@ export interface Game {
   id: string;
   name: string;
   steps: Step[];
+  roomId?: string;
 }
 
 export interface GameSettings {

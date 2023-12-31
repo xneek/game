@@ -11,7 +11,7 @@ interface CurrentProps extends HTMLAttributes<HTMLDivElement> {
  
 const Current: React.FC<CurrentProps> = ({...rest}) => {
 
-    const {currentPlayer, playerStatus, game, currentDice, gameSettings } = useAppSelector((s) => s.game);
+    const {currentPlayer, playerStatus, players, game, currentDice, gameSettings } = useAppSelector((s) => s.game);
     const dispatch =  useAppDispatch();
     const score = currentPlayer ? playerStatus[currentPlayer.id].score || 0 : 0;
     const step = game?.steps[(score + currentDice) - 1];
@@ -23,12 +23,7 @@ const Current: React.FC<CurrentProps> = ({...rest}) => {
 
     }, [step, gameSettings, currentPlayer, currentDice])
 
-    if (!currentPlayer) return <div>Has No currentPlayer</div>
-
-   
-
-    
-
+    if (!currentPlayer) return players.length === 0 ? <div><br />Ожидание игроков...<br /><br /></div> : <div>Has No currentPlayer</div>
 
 
     if (!step) return <div>Has No step</div>

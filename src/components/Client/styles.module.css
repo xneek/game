@@ -1,0 +1,21 @@
+:root {
+    --text-color-normal: #0a244d;
+    --bg-color-normal: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color-normal: #ffffff;
+        --bg-color-normal: #333333;
+    }
+}
+
+
+.client {
+    background-color: var(--bg-color-normal);
+    color: var(--text-color-normal);
+    height: 100dvb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

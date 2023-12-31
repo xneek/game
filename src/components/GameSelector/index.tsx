@@ -19,12 +19,17 @@ const GameSelector: React.FC<GameSelectorProps> = () => {
             el.focus();
             return;
         }
+        const roomEl = document.getElementById('roomId') as HTMLInputElement;
 
         // eslint-disable-next-line no-restricted-globals
         if (!players.length && !confirm('Начать без игроков?')) return;
 
         const game = games.find((g) => g.id === el.value);
         if (!game) throw new Error('Game is not found');
+
+        if (roomEl.value.length) {
+            game.roomId = roomEl.value;
+        }
 
         // eslint-disable-next-line no-restricted-globals
         if (confirm(`Начать игру «${game.name}»?`)) {
@@ -34,7 +39,10 @@ const GameSelector: React.FC<GameSelectorProps> = () => {
     }
 
     return (<div style={{ display: "flex", flexDirection:'column', gap: '8px' }}>
-        <h3 style={{ margin: 0 }}>Выбрать игру</h3>
+        <h3 style={{ margin: 0, display: 'flex', justifyContent:'space-between' }}>
+            Выбрать игру
+            <input size={6} placeholder='#id комнаты' id="roomId"/>
+        </h3>
         <select id="gameSelect" defaultValue="">
         <option disabled value=""> -- Выбрать игру -- </option>
             {games.map((g) => {
